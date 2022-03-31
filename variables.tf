@@ -10,24 +10,31 @@ variable "aws_ami_name" {
 }
 variable "vpc_name" {
   description = "Name of the vpc for my project"
-  type = string
+  type        = string
 
 }
 
 variable "ec2_type" {
-    description = "Type of my ex2 instance"
-    type = string
-    default = "t2.small"
+  description = "Type of my ex2 instance"
+  type        = string
+  default     = "t2.small"
 }
 
 variable "public_subnet_name" {
-    type = string
+  type = string
+}
+
+variable "private_subnet_name" {
+  type = string
 }
 
 variable "my_keypair" {
-    default = "training-key"
+  default = "training-key"
 }
 
 variable "number_of_instances" {
-    description = "Amount of instances for my public subnet"
+  description = "Amount of instances for my public subnet"
+}
+variable "number_of_private_instances" {
+  description = "Amount of instances for my public subnet"
 }
