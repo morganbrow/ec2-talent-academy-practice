@@ -8,7 +8,7 @@ resource "aws_instance" "my_public_server" {
   iam_instance_profile   = aws_iam_instance_profile.dashboard_server_profile.id
   user_data              = file("user-data.sh")
 
-    tags = {
+  tags = {
     Name = "public_server"
   }
 }
