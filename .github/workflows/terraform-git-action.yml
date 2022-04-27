@@ -1,7 +1,7 @@
 name: Terraform Pipeline
 on: [push]
 jobs:
-   Terraform-Fmt-Validate:
+   Terraform-deploy:
       runs-on: ubuntu-latest
       permissions:
         packages: write
@@ -9,7 +9,7 @@ jobs:
         id-token: write
       steps:
         - name: git clone of my repo
-          uses: action/checkout@v2
+          uses: actions/checkout@v3
         
         - name: AWS authentication
           uses: aws-actions/configure-aws-credentials@v1
