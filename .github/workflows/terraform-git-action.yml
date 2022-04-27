@@ -8,8 +8,8 @@ jobs:
         contents: read
         id-token: write
       steps:
-        - name: git clome of my repo
-          uses: action/checkout@v3
+        - name: git clone of my repo
+          uses: action/checkout@v2
         
         - name: AWS authentication
           uses: aws-actions/configure-aws-credentials@v1
