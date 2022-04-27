@@ -8,6 +8,13 @@ jobs:
 
         - name: Checkout
           uses: actions/checkout@v3
+        
+        - name: AWS authentication
+          uses: aws-actions/configute-aws-credentials@v1
+          with:
+            role-to-assume: arn:aws:iam::177225465752:role/github-oidc
+            aws-region: us-east-2
+            role-session-name: GithubDeployment
 
         - name: Setup Terraform
           uses: hashicorp/setup-terraform@v1
